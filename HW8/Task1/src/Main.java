@@ -29,5 +29,15 @@ public class Main {
         System.out.println("\nПечатаю развернутый массив");
         for (int k : myArray1)
             System.out.println(k);
+        // Разворот массива без создания дополнительного массива
+
+        for (int i=0; i<myArray.length/2; i++) {
+            int temp = myArray[i];
+            myArray[i] = myArray[myArray.length-1-i];
+            myArray[myArray.length-1-i] = temp;
+        }
+        System.out.println("\nПечатаю развернутый вторым способом массив");
+        for(int value : myArray) System.out.println(value);
+
     }
 }
